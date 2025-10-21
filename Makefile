@@ -29,7 +29,9 @@ CFILES = ft_atoi.c \
          ft_strmapi.c \
          ft_substr.c \
          ft_strjoin.c \
-         ft_itoa.c
+         ft_itoa.c \
+         ft_strtrim.c \
+         ft_split.c
 
 OBJ = $(CFILES:.c=.o)
 
