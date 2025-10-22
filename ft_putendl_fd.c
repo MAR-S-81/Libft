@@ -6,7 +6,7 @@
 /*   By: mchesnea <mchesnea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 12:42:06 by mchesnea          #+#    #+#             */
-/*   Updated: 2025/10/17 14:54:23 by mchesnea         ###   ########.fr       */
+/*   Updated: 2025/10/22 16:37:47 by mchesnea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (s[i])

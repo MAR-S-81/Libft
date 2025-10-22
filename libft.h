@@ -6,12 +6,12 @@
 /*   By: mchesnea <mchesnea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 15:39:01 by mchesnea          #+#    #+#             */
-/*   Updated: 2025/10/21 13:08:06 by mchesnea         ###   ########.fr       */
+/*   Updated: 2025/10/22 19:08:20 by mchesnea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H_
-# define LIBFT_H_
+#ifndef LIBFT_H
+# define LIBFT_H
 
 # include <stddef.h>
 # include <stdlib.h>
@@ -23,7 +23,7 @@ void	*ft_calloc(size_t count, size_t size);
 int		ft_isalnum(int charactere);
 int		ft_isalpha(int charactere);
 int		ft_isascii(int charactere);
-int		ft_digit(int charactere);
+int		ft_isdigit(int charactere);
 int		ft_isprint(int charactere);
 void	*ft_memchr(const void *mem, int chara, size_t size);
 int		ft_memcmp(const void *p1, const void *p2, size_t size);

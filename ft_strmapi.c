@@ -6,7 +6,7 @@
 /*   By: mchesnea <mchesnea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 13:59:03 by mchesnea          #+#    #+#             */
-/*   Updated: 2025/10/20 21:30:33 by mchesnea         ###   ########.fr       */
+/*   Updated: 2025/10/22 19:10:11 by mchesnea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	int i;
-	char *dest;
+	int		i;
+	char	*dest;
 
 	if (!s || !f)
 		return (NULL);

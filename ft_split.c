@@ -6,13 +6,13 @@
 /*   By: mchesnea <mchesnea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 13:05:16 by mchesnea          #+#    #+#             */
-/*   Updated: 2025/10/21 19:03:18 by mchesnea         ###   ########.fr       */
+/*   Updated: 2025/10/22 19:01:16 by mchesnea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	count_word(char const *s, char c)
+static int	count_word(char const *s, char c)
 {
 	int	i;
 	int	nb;
@@ -21,43 +21,63 @@ int	count_word(char const *s, char c)
 	nb = 0;
 	while (s[i])
 	{
-		if (s[i] == c && s[i + 1] != c)
+		while (s[i] == c)
+			i++;
+		if (s[i] != '\0')
 			nb++;
-		i++;
+		while (s[i] && s[i] != c)
+			i++;
 	}
-	return (nb + 1);
+	return (nb);
 }
 
-char	*get_word(char const *s, int start, int end)
+static void	*free_all(char **dest, int j)
 {
-	return (ft_substr(s, start, end - start));
+	int	i;
+
+	i = 0;
+	while (i < j)
+	{
+		if (dest[i] == NULL)
+		{
+			while (j > 0)
+			{
+				j--;
+				free(dest[j]);
+			}
+			free(dest);
+			return (NULL);
+		}
+		i++;
+	}
+	return (dest);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	int		i;
-	int		j;
 	char	**dest;
-	int		start;
+	int		len;
+	int		j;
 
-	i = 0;
+	len = 0;
 	j = 0;
-	start = 0;
-	s = ft_strtrim(s, &c);
 	if (!s)
 		return (NULL);
-	if (!(dest = malloc(sizeof(char *) * (count_word(s, c) + 1))))
+	dest = malloc((count_word(s, c) + 1) * sizeof(char *));
+	if (!dest)
 		return (NULL);
-	while (s[i])
+	while (*s)
 	{
-		if (s[i] == c)
-		{
-			dest[j] = get_word(s, start, i);
-			start = i++;
-			j++;
-		}
-		i++;
+		len = 0;
+		while (s[len] && s[len] != c)
+			len++;
+		if (len)
+			dest[j++] = ft_substr(s, 0, len);
+		while (s[len] && s[len] == c)
+			len++;
+		s += len;
 	}
 	dest[j] = NULL;
+	dest = free_all(dest, j);
 	return (dest);
 }

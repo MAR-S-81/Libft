@@ -6,7 +6,7 @@
 /*   By: mchesnea <mchesnea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 10:53:39 by mchesnea          #+#    #+#             */
-/*   Updated: 2025/10/21 11:58:06 by mchesnea         ###   ########.fr       */
+/*   Updated: 2025/10/22 19:22:22 by mchesnea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,19 +45,21 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		i;
 	char	*dest;
 
+	if (!set || !s1)
+		return (NULL);
 	start = check_if_set(s1, set, 0);
 	last = check_if_set(s1, set, 1) + 1;
 	i = 0;
-	if (!set || !s1)
-		return (NULL);
 	if (start >= (int)ft_strlen(s1))
 	{
-		if (!(dest = malloc(1)))
+		dest = malloc(1);
+		if (!dest)
 			return (NULL);
 		dest[0] = '\0';
 		return (dest);
 	}
-	if (!(dest = malloc(sizeof(char) * (last - start + 1))))
+	dest = malloc(sizeof(char) * (last - start + 1));
+	if (!dest)
 		return (NULL);
 	while (start < last)
 		dest[i++] = s1[start++];
