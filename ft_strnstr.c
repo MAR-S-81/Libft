@@ -6,7 +6,7 @@
 /*   By: mchesnea <mchesnea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 14:36:10 by mchesnea          #+#    #+#             */
-/*   Updated: 2025/10/16 14:44:24 by mchesnea         ###   ########.fr       */
+/*   Updated: 2025/10/23 19:47:49 by mchesnea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,5 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t len)
 			return ((char *)(s1 + i));
 		i++;
 	}
-	return (0);
+	return (NULL);
 }

@@ -6,7 +6,7 @@
 /*   By: mchesnea <mchesnea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 13:05:16 by mchesnea          #+#    #+#             */
-/*   Updated: 2025/10/22 19:01:16 by mchesnea         ###   ########.fr       */
+/*   Updated: 2025/10/23 14:18:31 by mchesnea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,6 @@ char	**ft_split(char const *s, char c)
 	int		len;
 	int		j;
 
-	len = 0;
 	j = 0;
 	if (!s)
 		return (NULL);

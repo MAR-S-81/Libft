@@ -6,7 +6,7 @@
 /*   By: mchesnea <mchesnea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 18:29:37 by mchesnea          #+#    #+#             */
-/*   Updated: 2025/10/21 18:28:01 by mchesnea         ###   ########.fr       */
+/*   Updated: 2025/10/23 19:44:19 by mchesnea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 
 	i = 0;
 	dest_len = 0;
-	src_len = 0;
-	while (src[src_len])
-		src_len++;
+	src_len = ft_strlen(src);
 	if (dst == NULL && dstsize == 0)
 		return (src_len);
 	while (dst[dest_len])

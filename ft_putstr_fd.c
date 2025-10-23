@@ -6,7 +6,7 @@
 /*   By: mchesnea <mchesnea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 12:36:08 by mchesnea          #+#    #+#             */
-/*   Updated: 2025/10/17 14:54:16 by mchesnea         ###   ########.fr       */
+/*   Updated: 2025/10/23 19:39:26 by mchesnea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_putstr_fd(char *s, int fd)
 	int	i;
 
 	i = 0;
+	if (!s)
+		return ;
 	while (s[i])
 	{
 		write(fd, &s[i], 1);

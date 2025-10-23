@@ -6,7 +6,7 @@
 /*   By: mchesnea <mchesnea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 12:40:08 by mchesnea          #+#    #+#             */
-/*   Updated: 2025/10/17 13:45:48 by mchesnea         ###   ########.fr       */
+/*   Updated: 2025/10/23 19:48:19 by mchesnea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,8 @@ char	*ft_strrchr(const char *str, int searchchar)
 	int				i;
 	unsigned char	c;
 
-	i = 0;
+	i = ft_strlen(str);
 	c = (unsigned char)searchchar;
-	while (str[i])
-		i++;
 	while (i >= 0)
 	{
 		if (str[i] == c)
