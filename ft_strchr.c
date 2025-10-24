@@ -6,18 +6,18 @@
 /*   By: mchesnea <mchesnea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 12:40:15 by mchesnea          #+#    #+#             */
-/*   Updated: 2025/10/17 13:44:51 by mchesnea         ###   ########.fr       */
+/*   Updated: 2025/10/24 16:18:02 by mchesnea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *str, int serchchar)
+char	*ft_strchr(const char *str, int searchchar)
 {
 	int				i;
 	unsigned char	c;
 
-	c = (unsigned char)serchchar;
+	c = (unsigned char)searchchar;
 	i = 0;
 	while (str[i])
 	{

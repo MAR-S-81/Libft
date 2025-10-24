@@ -6,13 +6,13 @@
 /*   By: mchesnea <mchesnea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 16:30:56 by mchesnea          #+#    #+#             */
-/*   Updated: 2025/10/20 19:40:26 by mchesnea         ###   ########.fr       */
+/*   Updated: 2025/10/24 16:19:08 by mchesnea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	sizeofint(long int n)
+static int	sizeofint(long int n)
 {
 	int	len;
 

@@ -6,13 +6,13 @@
 /*   By: mchesnea <mchesnea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 10:53:39 by mchesnea          #+#    #+#             */
-/*   Updated: 2025/10/22 19:22:22 by mchesnea         ###   ########.fr       */
+/*   Updated: 2025/10/24 11:19:39 by mchesnea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	check_if_set(char const *s, char const *set, int t)
+static int	check_if_set(char const *s, char const *set, int t)
 {
 	int	i;
 	int	j;
