@@ -22,3 +22,11 @@ make clean  # Removes object files
 make fclean # Removes object files and the library
 make re     # Rebuilds everything
 ```
+
+##Usage
+To use the library in your code, include the header and link the archive during compilation:
+
+1 - Include header:
+    #include "libft.h"
+2 - Compile:
+    cc main.c -L. -lft -o my_program
