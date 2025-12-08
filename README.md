@@ -30,4 +30,4 @@ To use the library in your code, include the header and link the archive during 
     #include "libft.h"
 
 2 - Compile:
-    cc main.c -L. -lft -o my_program
+    cc main.c libft.a
