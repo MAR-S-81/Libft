@@ -27,11 +27,13 @@ make re     # Rebuilds everything
 To use the library in your code, include the header and link the archive during compilation:
 
 1 - Include header:
+
 ```c
 #include "libft.h"
 ```
 
 2 - Compile:
+
 ```bash
 cc main.c libft.a
 ```
